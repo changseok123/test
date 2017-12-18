@@ -45,7 +45,94 @@
 	.checkbox-wrap input[type=radio] { display: none; }
 	.checkbox-wrap input[type=radio]:checked + .check-icon { background-image: url(../hot3/image/hot3uncheck.png); }
 	
-	
+	/* 파일업로드 */
+.input-file {
+   /* display: inline-block; */
+   width: 100%;
+}
+
+.input-file [type="file"] {
+   position: absolute;
+   width: 100%;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   border: 0 none;
+}
+
+.input-file .file-label {
+   /* display: inline-block; */
+   /* min-width: 53px; */
+   height: 40px;
+   line-height: 40px;
+   padding: 0 0px;
+   border-radius: 2px;
+   font-size: 13px;
+   /* background-color: #333; */
+   /* color: #fff; */
+   text-align: center;
+   width: 80px;
+}
+
+.input-file .file-name {
+   width: 50%;
+   background: #f5f5f5;
+   height: 40px;
+   line-height: 26px;
+   text-indent: 5px;
+   border: 1px solid #bbb;
+} /* 접근성 탭 포커스 스타일 */
+.file-focus {
+   outline: 1px dotted #d2310e;
+   /* float:left; */
+}
+
+	/* 파일업로드 */
+.input-file {
+   /* display: inline-block; */
+   width: 100%;
+}
+
+.input-file [type="file"] {
+   position: absolute;
+   width: 100%;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   border: 0 none;
+}
+
+.input-file .file-label {
+   /* display: inline-block; */
+   /* min-width: 53px; */
+   height: 40px;
+   line-height: 40px;
+   padding: 0 0px;
+   border-radius: 2px;
+   font-size: 13px;
+   /* background-color: #333; */
+   /* color: #fff; */
+   text-align: center;
+   width: 80px;
+}
+
+.input-file .file-name {
+   width: 50%;
+   background: #f5f5f5;
+   height: 40px;
+   line-height: 26px;
+   text-indent: 5px;
+   border: 1px solid #bbb;
+} /* 접근성 탭 포커스 스타일 */
+.file-focus {
+   outline: 1px dotted #d2310e;
+   /* float:left; */
+}
+
 	@media screen and (max-width: 750px) {
 		.cbInsertrow{
 			margin: 0px auto;
@@ -96,6 +183,14 @@
 				<div class="cbInsert_div">
 					<input type="file" id="hot3img" name="hot3img" class="cbInsert_input form-control" size="50px"/>		
 				</div>
+				
+				<!-- 첨부파일 -->
+            <div class="input-file" width=100% colspan="2" height=50px>
+               <!-- <input type="file" class="upload"> -->
+               <input type="text" readonly="readonly" class="file-name" /> 
+               <label for="upload01" class="file-label board_btn">사진 업로드</label> 
+               <input type="file" name="" id="upload01" class="file-upload" />
+            </div>
 				
 				
 				<div class="text-left">
