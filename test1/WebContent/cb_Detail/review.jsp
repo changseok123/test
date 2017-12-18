@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 
 <style>
-.reply_btn, .reply_insert_btn {
+.reply_btn, .reply_insert_btn, .re_reply_btn {
 	color: #262626;
 	background: #fff;
 	border: 1px solid #999;
@@ -71,7 +71,18 @@
 .review {
 	margin-bottom: 50px;
 }
-
+#board_page a {
+	color : #262626;
+}
+#reply_page a {
+	color : #262626;
+}
+#reply_page {
+	width: 100%;
+	border-top: 1px solid #ddd;
+	padding: 5px 0px;
+	background: rgb(247, 247, 247);
+}
 @media ( max-width : 570px) {
 	.reply_list td:first-child, .reply_insert td:first-child {
 		width: 60px;
@@ -99,6 +110,7 @@
 
 <script type="text/javascript">
 	$(function() {
+		//대댓글 보이기 숨기기
 		$(".reply_wrap").hide();
 		$(".reply_btn").click(function() {
 				var btn_id = $(this).attr("id");
@@ -111,6 +123,11 @@
 					$("#reply_" + btn_id[2]).slideDown("500");
 					$(this).html("닫&nbsp;&nbsp;&nbsp;기");
 				}
+		});
+		
+		//대댓글에 댓글달기
+		$(".re_reply_btn").click(function() {
+			$(".reply_content_insert textarea").text($(".reply_name").text());
 		});
 	});
 </script>
@@ -202,10 +219,7 @@
 								<td rowspan="2" width="100px"
 									class="text-center user_info reply_user">
 									<div id="reply_pro"></div>
-									<div class="reply_name">
-										<!-- 사용자 닉네임 -->
-										리뷰닉네임
-									</div>
+									<div class="reply_name" id="re_name_${j }">리뷰닉네임</div>
 								</td>
 								<td width="87%" class="text-left reply_content_td">
 									<div class="reply_content">
@@ -219,11 +233,21 @@
 								<td colspan="2"></td>
 								<td width="87%" class="text-right"><span>
 										<!-- 리뷰등록날짜 -->2017-12-15&nbsp;&nbsp;&nbsp;
-								</span> <button class="btn reply_btn">댓&nbsp;&nbsp;&nbsp;글</button></td>
+								</span> <button class="btn re_reply_btn"  id="re_btn_${j }">댓&nbsp;&nbsp;&nbsp;글</button></td>
 							</tr>
 						</table>
+				
 					</c:forEach>
-
+							
+					<div id="reply_page">
+			            <center>
+			               <a href="#"><</a>&nbsp;&nbsp;&nbsp;
+			               <c:forEach var="i" begin="1" end="10">
+			                  <a href="#">${i }</a>&nbsp;
+			                     </c:forEach>
+			               &nbsp;&nbsp;&nbsp;<a href="#">></a>
+			            </center>
+         			</div>
 					<!-- 대댓글 등록 -->
 					<table class="reply_insert">
 						<!-- 사용자 정보 & 내용 -->
@@ -232,13 +256,10 @@
 							<td rowspan="2" width="100px"
 								class="text-center user_info reply_user">
 								<div id="reply_pro"></div>
-								<div class="reply_name">
-									<!-- 사용자 닉네임 -->
-									리뷰닉네임
-								</div>
+								<div class="reply_name"><!-- 사용자 닉네임 -->리뷰닉네임</div>
 							</td>
 							<td width="87%" class="text-left reply_content_td">
-								<div class="reply_content">
+								<div class="reply_content_insert">
 									<textarea class="form-control" rows="2"></textarea>
 								</div>
 							</td>
@@ -253,7 +274,17 @@
 					</table>
 				</div>
 			</c:forEach>
+			
 		</div>
+		<div id="board_page">
+            <center>
+               <a href="#"><</a>&nbsp;&nbsp;&nbsp;
+               <c:forEach var="i" begin="1" end="10">
+                  <a href="#">${i }</a>&nbsp;
+                     </c:forEach>
+               &nbsp;&nbsp;&nbsp;<a href="#">></a>
+            </center>
+         </div>
 	</div>
 </body>
 </html>
