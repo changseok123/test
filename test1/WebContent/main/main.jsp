@@ -170,7 +170,7 @@ html, body {
 	<div style="height: 102px"></div>
 
 		<div class="include_wrap">
-			<jsp:include page="../hot3/hot3insert.jsp"></jsp:include>
+			<jsp:include page="../ssulboard/ssul.jsp"></jsp:include>
 			<!-- include -->
 		</div>
 		
