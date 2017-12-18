@@ -134,9 +134,26 @@
 				<div>
 					<img id="logo" src="image/logo.png">
 				</div>
-				<div id="enterBtn" onclick="location.href='main/main.jsp;'">
+				<div id="enterBtn" data-toggle="modal" data-target="#loginModal">
 					<p>입장하기</p>
 				</div>
+				<!-- 로그인 모달 -->
+            	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+            	data-backdrop="static" data-keyboard="false">
+               		<div class="modal-dialog">
+                  		<div class="modal-content">
+                     		<div class="modal-header">
+                        		<button type="button" class="close" data-dismiss="modal">
+                           		<span aria-hidden="true" style="color:white">X</span><span class="sr-only">Close</span>
+                        		</button>
+                        		<h3 class="modal-title" id="myModalLabel">로그인</h3>
+                     		</div>
+                     		<div class="modal-body">
+                        		<jsp:include page="member/login.jsp"/>
+                     		</div>
+                 		</div>
+               		</div>
+            	</div>
 				<div id="intro">
 					<span>끼리끼리 소개</span>
 				</div>

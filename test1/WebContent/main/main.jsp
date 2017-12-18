@@ -170,7 +170,11 @@ html, body {
 	<div style="height: 102px"></div>
 
 		<div class="include_wrap">
+<<<<<<< HEAD
 			<jsp:include page="../hot3/hot3main.jsp"></jsp:include>
+=======
+			<jsp:include page="../ssulboard/ssul.jsp"></jsp:include>
+>>>>>>> branch 'master' of https://github.com/changseok123/test.git
 			<!-- include -->
 		</div>
 		
