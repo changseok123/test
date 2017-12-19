@@ -12,7 +12,7 @@
 .row {
 	margin: 0px auto;
 	width: 60%;
-	height: 400px;
+	height: 360px;
 	text-align: center;
 }
 
@@ -22,7 +22,12 @@
 	height: 480px;
 	background-image: url("../main2/back.jpg");
 	background-size: cover;
-	padding-top: 200px;
+	padding-top: 120px;
+}
+
+.north_name {
+	margin: 0 auto;
+	text-align: center;
 }
 
 .sidenav {
@@ -50,14 +55,14 @@
 	background-color: black;
 	opacity: 0.6;
 	width: 59%;
-	height: 400px;
+	height: 360px;
 }
 
 .jumpo_name {
 	position: relative;
 	display: inline-block;
 	font-size: 37pt;
-	margin-top: 80px;
+	margin-top: 30px;
 	color: white;
 	display: inline-block;
 }
@@ -79,8 +84,8 @@
 
 .like, .rating, .hit {
 	padding: 5px 40px;
-	height: 140px;
-	margin-top: 50px;
+	height: 135px;
+	margin-top: 30px;
 	border-left: 6px solid rgb(255, 255, 255);
 	margin-bottom: 4px;
 	margin-top: 50px;
@@ -88,7 +93,7 @@
 }
 
 .hit {
-	height: 150px;
+	height: 135px;
 	border-right: 6px solid rgb(255, 255, 255);
 }
 
@@ -100,6 +105,7 @@
 
 .cb_info_table {
 	margin: 0px auto;
+
 }
 
 .total_tool {
@@ -123,11 +129,33 @@
 .insearch {
 	width: 35%;
 	margin: 0 auto;
-	
 }
 
 .textbox {
 	border: 2px solid rgb(162, 0, 0);
+}
+
+.main_jumpo {
+	margin-top: 30px;
+}
+
+.weekend {
+	margin: 0 auto;
+	height: 75px;
+	text-align: center;
+	margin-top: 70px;
+	width: 35%;
+	border-bottom: 5px solid rgb(162, 0, 0);
+}
+
+.weekend h1 {
+	font-size: 35pt;
+	margin-bottom: 0px;
+}
+
+.weekend strong {
+	font-size: 55pt;
+	color: rgb(162, 0, 0);
 }
 
 @media all and (min-width: 770px) and (max-width: 1200px) {
@@ -137,6 +165,20 @@
 }
 
 @media screen and (max-width: 750px) {
+	.weekend {
+		margin: 0 auto;
+		height: 80px;
+		text-align: center;
+		margin-top: 30px;
+		width: 90%;
+		border-bottom: 3px solid rgb(162, 0, 0);
+	}
+	.weekend h1 {
+		font-size: 25pt;
+	}
+	.weekend strong {
+		font-size: 35pt;
+	}
 	.insearch {
 		width: 85%
 	}
@@ -186,16 +228,16 @@
 	}
 	.like, .rating, .hit {
 		padding: 5px 25px;
-		margin-top: 40px;
+		margin-top: 70px;
 		border-left: 3px solid rgb(255, 255, 255);
 		margin-bottom: 4px;
 		width: 100px;
-		height: 100px;
+		height: 110px;
 		padding: 5px 5px;
 	}
 	.hit {
-		margin-top: 40px;
-		height: 100px;
+		margin-top: 70px;
+		height: 110px;
 		border-right: 3px solid rgb(255, 255, 255);
 	}
 	.like h2, .rating h2, .hit h2 {
@@ -211,6 +253,7 @@
 	.cb_info_table {
 		margin: 0px auto;
 		width: 247px;
+		
 	}
 	.like h2, .rating h2, .hit h2 {
 		font-size: 20px;
@@ -230,7 +273,10 @@
 </head>
 <body>
 	<div class="main_north">
-		
+		<div class="north_name">
+			<p style="color: white; font-size: 25pt;">오늘 솔로들은</p>
+			<p style="color: white; font-size: 35pt;">뭐하고 놀지?</p>
+		</div>
 		<div class="input-group insearch">
 
 			<input type="text" class="search-query form-control textbox col-md-9"
@@ -249,6 +295,7 @@
 
 
 
+
 	<div class="container-fluid">
 
 		<div class="content time_side">
@@ -260,6 +307,12 @@
 					</span>
 				</div>
 			</div>
+		</div>
+
+		<div class="weekend">
+			<h1>
+				주간 <strong>HOT</strong> 플레이스
+			</h1>
 		</div>
 
 		<div class="row_class">
