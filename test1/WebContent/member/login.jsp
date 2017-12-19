@@ -50,7 +50,7 @@ $(function(){
 	<div>
 		<div class="row loginrow">
 			<div style="height: 20px"></div>
-			<form>
+			<form action="login_ok.do" method="post">
     			<div class="login_div">
       				<input id="email" type="email" class="form-control login_input" name="email" placeholder="Email" required>
     			</div>
@@ -59,7 +59,7 @@ $(function(){
    				</div>
     			<br>
     			<div class="text-right login_text">
-    				<a href="#">회원가입</a><br>
+    				<a href="join.do">회원가입</a><br>
     				<a href="#idFindModal" data-toggle="modal">아이디 찾기</a> / 
     				<a href="#pwdFindModal" data-toggle="modal">비밀번호 찾기</a>
     			</div>
