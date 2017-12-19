@@ -165,11 +165,13 @@
 <body>
 	<div>
 		<div style="height: 20px"></div>
+		<!-- 게시판 프로필 -->
 		<div id="board_pro"></div>
 		<div id="board_user">
 			<p id="board_name">배주현</p>
 		</div>
 		<div style="height: 30px"></div>
+		<!-- 게시판 insert -->
 		<table id="board_content">
 			<tr id="board_subject">
 				<td id="board_subTxt" width="7%">
@@ -193,6 +195,7 @@
 				</td>
 
 			</tr>
+			<!-- 게시판 insert등록버튼 -->
 			<tr>
 				<td colspan="2" class="text-right" height=30px>
 					<input id="board_insertBtn" class="btn board_btn" type="button" value="등록">

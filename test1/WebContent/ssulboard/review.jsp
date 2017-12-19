@@ -8,6 +8,85 @@
 <title>Insert title here</title>
 
 <style>
+.review_wrap {
+	margin-top: 70px;
+}
+.review h2 {
+	font-weight: bold;
+	padding-bottom:10px;
+	border-bottom: 2px solid #bbb;
+}
+.review_insert {
+	width:100%;
+	height:150px;
+}
+.board_pro{
+    background-image: url('../image/pro.png');
+    background-size: 100%;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin:10px auto;
+}
+#board_replypro{
+	background-image: url('../image/kang.PNG');
+}
+.pro_name {
+    margin-top: 13px;
+}
+.profile {
+    line-height: 100px;
+}
+
+.review_btn {
+	width:100px;
+	background: rgb(162,0,0);
+	color: #fff;
+	font-size: 17px;
+}
+.review_btn:hover, .review_btn:focus {
+	color:#fff;
+}
+.review_insert table {
+	width:100%;
+	height:150px;
+}
+.review_insert table textarea {
+	resize: none;
+}
+.reviewlist {
+	width:100%;
+}
+.reviewlist th td {
+	vertical-align: middle;
+	line-height: 100%;
+	padding-top: 70px;
+}
+.review_content {
+	margin-left: 20px;
+	padding:20px 0px;
+}
+@media (max-width: 509px) {
+  .cb_info_table {
+  	width:247px;
+  }
+  .like, .rating, .hit{
+  	padding: 5px 5px;
+  }
+  .like h2,.rating h2,.hit h2 {
+  	font-size:20px;
+  	font-weight: bold;
+  }
+  .cb_detail p {
+  	font-size: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+	.cb_detail {
+		width:90%;
+	}
+}
 .reply_btn, .reply_insert_btn, .re_reply_btn {
 	color: #262626;
 	background: #fff;
@@ -70,6 +149,9 @@
 }
 .review {
 	margin-bottom: 50px;
+}
+#board_page{
+	margin-top: 30px;
 }
 #board_page a {
 	color : #262626;
@@ -140,13 +222,13 @@
 </head>
 <body>
 	<div class="review">
-		<h2>Review</h2>
+		<h2>Reply</h2>
 		<div class="review_insert">
 			<table>
 				<!-- 사용자 정보 & 리뷰 내용 -->
 				<tr>
 					<td width="10%" class="text-center">
-						<div id="board_pro"></div>
+						<div class="board_pro"></div>
 						<div class="pro_name">
 							<!-- 사용자 닉네임 -->
 							USER
@@ -156,21 +238,16 @@
 							cols="100%"></textarea></td>
 					<!-- 별점 & 버튼 -->
 				</tr>
-				<td>
-					<div class="list_star">
-						<!-- 별점주기 -->
-						<img src="../cb_Detail/image/rating.png">
-					</div>
-				</td>
-				<td class="text-right">
-					<div class="star_insert">
-						<input type="button" class="btn review_btn"
-							value="등&nbsp;&nbsp;&nbsp;&nbsp;록" />
-					</div>
-
-				</td>
 				<tr>
-
+					<td>
+						
+					</td>
+					<td class="text-right">
+						<div class="star_insert">
+							<input type="button" class="btn review_btn"
+								value="등&nbsp;&nbsp;&nbsp;&nbsp;록" />
+						</div>
+					</td>
 				</tr>
 			</table>
 
@@ -183,7 +260,7 @@
 					<!-- 사용자 정보 & 내용 -->
 					<tr>
 						<td width="10%" class="text-center user_info">
-							<div id="board_pro"></div>
+							<div class="board_pro" id="board_replypro"></div>
 							<div class="pro_name">
 								<!-- 사용자 닉네임 -->
 								리뷰닉네임
@@ -203,10 +280,7 @@
 					<!-- 별점 & 댓글 버튼 -->
 					<tr>
 						<td width="10%" class="text-center">
-							<div class="star list_star">
-								<img src="../cb_Detail/image/rating.png">
-								<h4>5.0</h4>
-							</div>
+							
 						</td>
 						<td width="90%" class="text-right"><span>
 								<!-- 리뷰등록날짜 -->2017-12-15&nbsp;&nbsp;&nbsp;
@@ -220,7 +294,7 @@
 						<table class="reply_list">
 							<!-- 사용자 정보 & 내용 -->
 							<tr>
-								<td widht="3%" class="reply_tab"></td>
+								<td width="3%" class="reply_tab"></td>
 								<td rowspan="2" width="100px"
 									class="text-center user_info reply_user">
 									<div id="reply_pro"></div>
@@ -265,7 +339,7 @@
 							</td>
 							<td width="87%" class="text-left reply_content_td">
 								<div class="re_content_insert">
-									<textarea class="form-control" rows="2" id="re_content_${i }">dd</textarea>
+									<textarea class="form-control" rows="2" id="re_content_${i }"></textarea>
 								</div>
 							</td>
 						</tr>

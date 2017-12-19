@@ -125,6 +125,7 @@ html, body {
 </style>
 
 </head>
+<body>
 <div class="main_wrap">
 	<nav class="navbar navbar-inverse navbar-fixed-top header">
 	<div class="container-fluid">
@@ -170,10 +171,8 @@ html, body {
 	</nav>
 	<div style="height: 102px"></div>
 
-
 		<div class="include_wrap">
 		<jsp:include page="${main_jsp}"></jsp:include>
-
 		
 		<div id="footer" class="text-center">
 			<div id="footer_1">
@@ -200,6 +199,7 @@ html, body {
 
 		</div>
 
+</div>
 </div>
 
 </body>

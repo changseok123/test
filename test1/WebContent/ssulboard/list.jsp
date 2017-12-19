@@ -123,6 +123,7 @@
 </script>
 <body>
 	<div>
+		<!-- 게시판 검색 -->
 		<div id="search">
 			<select id="board_searchSel">
 				<option>글제목</option>
@@ -133,6 +134,7 @@
 	</div>
 	<div class="row">
 		<div style="height: 40px"></div>
+		<!-- 게시판 리스트 -->
 		<table class="table">
 			<tr>
 				<th width=10% class="text-center board-th board_Tno">번호</th>
@@ -152,6 +154,8 @@
 				</tr>
 			</c:forEach>
 		</table>
+		
+		<!-- 버튼, 페이지 -->
 		<div>
 			<div>
 				<input type="button" class="btn boardBtn" value="글쓰기"

@@ -95,6 +95,7 @@
 		}
 	}
 </style>
+<!-- 게시판 모드 css -->
 <script type="text/javascript">
    $(document).ready(function() {
       $(".board_modeBtn").on("click", function() {
@@ -116,7 +117,8 @@
 		</div>
 		<div style="height: 10px"></div>
 		<div>
-			<jsp:include page="list.jsp"></jsp:include>
+			<!-- include -->
+			<jsp:include page="content.jsp"></jsp:include>
 		</div>
 	</div>
 
