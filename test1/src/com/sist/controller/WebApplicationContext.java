@@ -1,42 +1,34 @@
 package com.sist.controller;
-import java.io.File;
 import java.util.*;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-//클래스 관리자
+import java.io.*;
 public class WebApplicationContext {
-	
 	private List<String> list = new ArrayList<String>();
-	/*public static void main(String[] args) {
-		String path = "C:\\webDev\\mvcStudy\\MVCFinalProject\\WebContent\\WEB-INF\\application-context.xml";
-		WebApplicationContext wc = new WebApplicationContext(path);
-		
-	}*/
+	
 	public WebApplicationContext(String path) {
 		try {
 			SAXParserFactory spf = SAXParserFactory.newInstance();
-			//SAX파서기 생성
 			SAXParser sp = spf.newSAXParser();
 			HandlerMapping hm = new HandlerMapping();
 			sp.parse(new File(path), hm);
-			List<String> packList = hm.getList();//패키지명만 들어있는 list
+			
+			List<String> packList = hm.getList();
 			
 			FileConfig fc = new FileConfig();
-			for(String pack : packList) {
+			for (String pack : packList) {
 				List<String> p = fc.componentScan(pack);
-				for(String s : p) {
-					System.out.println(s);
+				for (String s : p) {
 					list.add(s);
 				}
 			}
-			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 	}
-	
+
 	public List<String> getList() {
 		return list;
 	}

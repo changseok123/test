@@ -3,32 +3,28 @@ package com.sist.controller;
 import java.io.*;
 import java.util.*;
 
-//com.sist.model.Class¸í À¸·Î ¸¸µé¾îÁÖ´Â ¿ªÇÒ
 public class FileConfig {
 	public List<String> componentScan(String pack) {
 		List<String> list = new ArrayList<String>();
-		
 		try {
-			String path = "C:\\webDev\\mvcStudy\\MVCFinalProject\\src\\";
-			path = path + pack.replace(".", "\\");
+			String path = "https://github.com/changseok123/test/tree/master/test1/src"+"\\";
+			path=path+pack.replace(".", "\\");
 			File dir = new File(path);
 			File[] files = dir.listFiles();
-			
-			//¸Þ¸ð¸®ÇÒ´ç : com.sist.model.Class¸í
-			for(File f : files) {
-				String name = f.getName(); //ÆÄÀÏ¸í °¡Á®¿À±â
-				String ext = name.substring(name.lastIndexOf(".")+1); //È®ÀåÀÚ ÀÐ±â
-				//javaÆÄÀÏ¸¸ ÀÐ±â
-				if(ext.equals("java")) {
-					String str = pack + "." + name.substring(0, name.lastIndexOf(".")); //Å¬·¡½º¸í±îÁö °¡Á®¿À±â
-					list.add(str); //pack + Å¬·¡½º¸íÀ» add
-					//¸Þ¸ð¸®ÇÒ´çÇÒÁö ¾ÈÇÒÁö´Â => AnnotationÀ¸·Î ±¸ºÐ
+			//com.sist.model.Classëª…
+			for (File f : files) {
+				String name = f.getName();
+				String ext = name.substring(name.lastIndexOf(".")+1);
+
+				if (ext.equals("java")) {
+					String str = pack+"."+name.substring(0, name.lastIndexOf("."));
+					list.add(str);
 				}
 			}
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-		
 		return list;
 	}
 }
+
