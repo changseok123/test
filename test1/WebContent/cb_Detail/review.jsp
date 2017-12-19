@@ -265,7 +265,7 @@
 							</td>
 							<td width="87%" class="text-left reply_content_td">
 								<div class="re_content_insert">
-									<textarea class="form-control" rows="2" id="re_content_${i }"></textarea>
+									<textarea class="form-control" rows="2" id="re_content_${i }">dd</textarea>
 								</div>
 							</td>
 						</tr>
