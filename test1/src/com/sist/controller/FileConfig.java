@@ -7,7 +7,7 @@ public class FileConfig {
 	public List<String> componentScan(String pack) {
 		List<String> list = new ArrayList<String>();
 		try {
-			String path = "https://github.com/changseok123/test/tree/master/test1/src"+"\\";
+			String path = "https://github.com/changseok123/test/tree/master/test1/src\\";
 			path=path+pack.replace(".", "\\");
 			File dir = new File(path);
 			File[] files = dir.listFiles();
@@ -22,7 +22,7 @@ public class FileConfig {
 				}
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			System.out.println("FileConfig : " + e.getMessage());
 		}
 		return list;
 	}
