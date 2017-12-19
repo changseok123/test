@@ -169,6 +169,7 @@ html, body {
 	</nav>
 	<div style="height: 102px"></div>
 
+<<<<<<< HEAD
 		<div class="include_wrap">
 		<jsp:include page="../cb_Detail/cb_detail.jsp"></jsp:include>
 <%--<<<<<<< HEAD
@@ -180,6 +181,10 @@ html, body {
 			<jsp:include page="../ssulboard/ssul.jsp"></jsp:include> 
 >>>>>>> branch 'master' of https://github.com/changseok123/test.git
 >>>>>>> branch 'master' of https://github.com/changseok123/test.git--%>
+=======
+		<div class="include_wrap">
+			<jsp:include page="../hot3/hot3insert.jsp"></jsp:include>
+>>>>>>> branch 'master' of https://github.com/changseok123/test.git
 			<!-- include -->
 		</div>
 		
