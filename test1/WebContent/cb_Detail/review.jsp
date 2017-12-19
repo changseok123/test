@@ -127,7 +127,12 @@
 		
 		//´ë´ñ±Û¿¡ ´ñ±Û´Þ±â
 		$(".re_reply_btn").click(function() {
-			$(".reply_content_insert textarea").text($(".reply_name").text());
+			var re_btn_id = $(this).attr("id");
+			re_btn_id = re_btn_id.split("_");
+			$("#re_content_" + re_btn_id[2]).val("");
+			$("#re_content_" + re_btn_id[2]).val(
+					 "@"+ $("#re_name_" + re_btn_id[2] + "_" + re_btn_id[3]).text() + "   ");
+			$("#re_content_" + re_btn_id[2]).focus();
 		});
 	});
 </script>
@@ -219,7 +224,7 @@
 								<td rowspan="2" width="100px"
 									class="text-center user_info reply_user">
 									<div id="reply_pro"></div>
-									<div class="reply_name" id="re_name_${j }">¸®ºä´Ð³×ÀÓ</div>
+									<div class="reply_name" id="re_name_${i }_${j }">¸®ºä´Ð³×ÀÓ</div>
 								</td>
 								<td width="87%" class="text-left reply_content_td">
 									<div class="reply_content">
@@ -233,7 +238,7 @@
 								<td colspan="2"></td>
 								<td width="87%" class="text-right"><span>
 										<!-- ¸®ºäµî·Ï³¯Â¥ -->2017-12-15&nbsp;&nbsp;&nbsp;
-								</span> <button class="btn re_reply_btn"  id="re_btn_${j }">´ñ&nbsp;&nbsp;&nbsp;±Û</button></td>
+								</span> <button class="btn re_reply_btn"  id="re_btn_${i }_${j }">´ñ&nbsp;&nbsp;&nbsp;±Û</button></td>
 							</tr>
 						</table>
 				
@@ -242,9 +247,9 @@
 					<div id="reply_page">
 			            <center>
 			               <a href="#"><</a>&nbsp;&nbsp;&nbsp;
-			               <c:forEach var="i" begin="1" end="10">
-			                  <a href="#">${i }</a>&nbsp;
-			                     </c:forEach>
+			               <c:forEach var="k" begin="1" end="10">
+			                  <a href="#">${k }</a>&nbsp;
+			               </c:forEach>
 			               &nbsp;&nbsp;&nbsp;<a href="#">></a>
 			            </center>
          			</div>
@@ -259,8 +264,8 @@
 								<div class="reply_name"><!-- »ç¿ëÀÚ ´Ð³×ÀÓ -->¸®ºä´Ð³×ÀÓ</div>
 							</td>
 							<td width="87%" class="text-left reply_content_td">
-								<div class="reply_content_insert">
-									<textarea class="form-control" rows="2"></textarea>
+								<div class="re_content_insert">
+									<textarea class="form-control" rows="2" id="re_content_${i }"></textarea>
 								</div>
 							</td>
 						</tr>

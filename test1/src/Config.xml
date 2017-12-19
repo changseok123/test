@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.sist.movie.dao.MovieVO" alias="MovieVO"/>
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<!-- 
+					transaction : COMMIT, ROLLBACK(일괄처리)
+					JDBC라이브러리 이용 = JDBC(autoCommit)
+					MANAGED : 프로그래머가 관리
+					try{
+						autoCommit
+						-
+						-
+						-
+						-
+					} catch(Exception ex) {
+						rollback
+					}
+			 -->
+			 
+			 <!-- 오라클 정보 저장 : driver, url, username, password
+			 		=> Connection
+			 		= JDBC : UNPOOLED
+			 		= DBCP : POOLED
+			  -->
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+				
+				<!-- 
+					driver : thin  : 오라클하고 연결만 담당
+							 oci   : 오라클 정보를 전체 가지고 있다
+					ORCL : 데이터베이스 이름 (SID, 전역 데이터베이스)
+					오라클
+					  DATABASE = 여러개의 테이블
+					  ========   ==========
+						   폴더		파일
+				 -->
+				<property name="url" value="jdbc:oracle:thin:@211.238.142.234:1521:ORCL"/>
+				<property name="username" value="scott"/>
+				<property name="password" value="1234"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<!-- PreparedStatement, ResultSet -->
+		<!-- resource : 각종 파일들 -->
+		<mapper resource="com/sist/movie/dao/movie-mapper.xml"/>
+	</mappers>
+</configuration>
