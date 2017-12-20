@@ -10,5 +10,6 @@ public class MainModel {
 	@RequestMapping("main.do")
 	public String main_page(HttpServletRequest req, HttpServletResponse res) {
 		return "main/main.jsp";
+		//
 	}
 }
