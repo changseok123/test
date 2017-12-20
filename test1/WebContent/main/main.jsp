@@ -10,9 +10,9 @@
 
 <link href="https://fonts.googleapis.com/css?family=JejuGothic"
 	rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
-<script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 <style type="text/css">
 * {
@@ -136,7 +136,7 @@ html, body {
 					class="icon-bar"></span>
 			</button>
 			<a href="main.jsp" class="" style="color: white"> <img
-				id="logo_img" src="../image/logo1.png">
+				id="logo_img" src="image/logo1.png">
 			</a>
 		</div>
 		<div class="navbar-collapse collapse">
@@ -162,7 +162,7 @@ html, body {
 				<!-- À¯Àú -->
 				<div class="navbar-right" id="navbar-main">
 					<div class="">
-						<img src="../image/man.png" id="user_img" /> <font color="white">USER</font>
+						<img src="image/man.png" id="user_img" /> <font color="white">USER</font>
 					</div>
 				</div>
 			</c:if>

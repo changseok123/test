@@ -20,7 +20,7 @@
 	position: relative;
 	margin: 0px auto;
 	height: 480px;
-	background-image: url("../main2/back.jpg");
+	background-image: url("main2/back.jpg");
 	background-size: cover;
 	padding-top: 120px;
 }
@@ -105,7 +105,6 @@
 
 .cb_info_table {
 	margin: 0px auto;
-
 }
 
 .total_tool {
@@ -253,7 +252,6 @@
 	.cb_info_table {
 		margin: 0px auto;
 		width: 247px;
-		
 	}
 	.like h2, .rating h2, .hit h2 {
 		font-size: 20px;
@@ -268,7 +266,11 @@
 }
 </style>
 <script type="text/javascript">
-	
+	 $(function() {
+		$("#main2btn").click(function(){
+			$("#main2fmt").submit();
+		});
+	}); 
 </script>
 </head>
 <body>
@@ -278,17 +280,18 @@
 			<p style="color: white; font-size: 35pt;">뭐하고 놀지?</p>
 		</div>
 		<div class="input-group insearch">
-
-			<input type="text" class="search-query form-control textbox col-md-9"
-				placeholder="지역/가게명" style="height: 50px; font-size: 20px;" /> <span
-				class="input-group-btn">
-				<button class="btn col-md-3"
-					style="height: 50px; width: 80px; text-align: center; font-size: 20px; background-color: rgb(162, 0, 0); color: white;"
-					type="button">
-					<img src="../main2/dot.png" style="width: 35px">
-
-				</button>
-			</span>
+			<form method="post" action="mainsearch.do" id="main2fmt">
+				<input type="text"
+					class="search-query form-control textbox col-md-9"
+					placeholder="지역/가게명" style="height: 50px; font-size: 20px;" /> <span
+					class="input-group-btn">
+					<button class="btn col-md-3" id="main2btn"
+						style="height: 50px; width: 80px; text-align: center; font-size: 20px; background-color: rgb(162, 0, 0); color: white;"
+						type="button">
+						<img src="main2/dot.png" style="width: 35px">
+					</button>
+				</span>
+			</form>
 		</div>
 	</div>
 
@@ -323,7 +326,7 @@
 				</div>
 
 				<div class="row"
-					style="background-image: url(../main2/club1.jpg); background-size: 100% 100%;">
+					style="background-image: url(main2/club1.jpg); background-size: 100% 100%;">
 					<div class="black_box"></div>
 					<div class="jumpo_name">
 
@@ -335,7 +338,7 @@
 									<td>
 										<div class="rating text-center">
 											<p>평점</p>
-											<img src="../main2/rating.png">
+											<img src="main2/rating.png">
 											<h4>4.1</h4>
 
 										</div>
@@ -343,14 +346,14 @@
 									<td>
 										<div class="like text-center">
 											<p>찜</p>
-											<img src="../main2/like.png">
+											<img src="main2/like.png">
 											<h4>1246</h4>
 										</div>
 									</td>
 									<td>
 										<div class="hit text-center">
 											<p>조회수</p>
-											<img src="../main2/hit_icon.png">
+											<img src="main2/hit_icon.png">
 											<h4>4766</h4>
 
 										</div>
@@ -368,7 +371,7 @@
 					<p>이태원</p>
 				</div>
 				<div class="row"
-					style="background-image: url(../main2/club2.jpg); background-size: 100% 100%;">
+					style="background-image: url(main2/club2.jpg); background-size: 100% 100%;">
 					<div class="black_box"></div>
 					<div class="jumpo_name">
 						<p>강남 아레나</p>
@@ -378,7 +381,7 @@
 									<td>
 										<div class="rating text-center">
 											<p>평점</p>
-											<img src="../main2/rating.png">
+											<img src="main2/rating.png">
 											<h4>4.1</h4>
 
 										</div>
@@ -386,14 +389,14 @@
 									<td>
 										<div class="like text-center">
 											<p>찜</p>
-											<img src="../main2/like.png">
+											<img src="main2/like.png">
 											<h4>1246</h4>
 										</div>
 									</td>
 									<td>
 										<div class="hit text-center">
 											<p>조회수</p>
-											<img src="../main2/hit_icon.png">
+											<img src="main2/hit_icon.png">
 											<h4>4766</h4>
 
 										</div>
@@ -409,7 +412,7 @@
 					<p>홍대</p>
 				</div>
 				<div class="row"
-					style="background-image: url(../main2/club3.jpg); background-size: 100% 100%;">
+					style="background-image: url(main2/club3.jpg); background-size: 100% 100%;">
 					<div class="black_box"></div>
 					<div class="jumpo_name">
 						<p>강남 디스타</p>
@@ -419,7 +422,7 @@
 									<td>
 										<div class="rating text-center">
 											<p>평점</p>
-											<img src="../main2/rating.png">
+											<img src="main2/rating.png">
 											<h4>4.1</h4>
 
 										</div>
@@ -427,14 +430,14 @@
 									<td>
 										<div class="like text-center">
 											<p>찜</p>
-											<img src="../main2/like.png">
+											<img src="main2/like.png">
 											<h4>1246</h4>
 										</div>
 									</td>
 									<td>
 										<div class="hit text-center">
 											<p>조회수</p>
-											<img src="../main2/hit_icon.png">
+											<img src="main2/hit_icon.png">
 											<h4>4766</h4>
 
 										</div>
